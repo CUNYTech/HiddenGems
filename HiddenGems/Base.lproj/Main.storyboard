@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gZI-EQ-yvN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gZI-EQ-yvN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -287,7 +287,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bcG-nh-YjO" kind="show" id="fiq-fq-5CA"/>
+                                    <segue destination="Bzk-EU-F5T" kind="show" id="rgT-Mg-nLQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferences" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-jB-iIw">
@@ -525,6 +525,48 @@
             </objects>
             <point key="canvasLocation" x="563" y="1856"/>
         </scene>
+        <!--MapGooglePlaces-->
+        <scene sceneID="NAB-Vj-KwC">
+            <objects>
+                <viewController title="MapGooglePlaces" id="Bzk-EU-F5T" customClass="GooglePlacesViewController" customModule="HiddenGems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWf-Um-RDC"/>
+                        <viewControllerLayoutGuide type="bottom" id="LYf-JN-WOO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="98i-dM-AoN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFl-Qk-rQq">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vFl-Qk-rQq" firstAttribute="top" secondItem="PWf-Um-RDC" secondAttribute="bottom" id="3Wd-Bi-slQ"/>
+                            <constraint firstItem="LYf-JN-WOO" firstAttribute="top" secondItem="vFl-Qk-rQq" secondAttribute="bottom" constant="-44" id="LvI-nU-2IX"/>
+                            <constraint firstItem="vFl-Qk-rQq" firstAttribute="leading" secondItem="98i-dM-AoN" secondAttribute="leadingMargin" constant="-20" id="WMK-AA-XVd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vFl-Qk-rQq" secondAttribute="trailing" constant="-20" id="wCi-vG-wwS"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="DwN-t0-G7V">
+                        <barButtonItem key="rightBarButtonItem" title="Explore" id="beH-32-te3">
+                            <connections>
+                                <action selector="exploreVenuesNearMe:" destination="Bzk-EU-F5T" id="sTy-cQ-K4k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapViewContainer" destination="vFl-Qk-rQq" id="mFJ-GO-Emd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZK-Jm-bqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295" y="1835"/>
+        </scene>
         <!--My Account-->
         <scene sceneID="TwM-wY-uxb">
             <objects>
@@ -658,14 +700,14 @@
                         <viewControllerLayoutGuide type="bottom" id="iUs-n5-AWZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Two-lY-ERp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="znU-3y-DII">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="znU-3y-DII">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="692"/>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-vA-pFx">
-                                <rect key="frame" x="0.0" y="648" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="512" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="XAD-Xt-Y8S">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I6z-fP-SeA">
@@ -684,7 +726,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="arN-tj-cLh"/>
                                     <barButtonItem style="plain" id="70I-MG-Kju">
                                         <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="500" maxValue="1600" id="Ew1-GD-pAK">
-                                            <rect key="frame" x="173" y="7" width="138" height="31"/>
+                                            <rect key="frame" x="231" y="7" width="138" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" red="0.4823529412" green="0.83137254900000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -695,7 +737,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Urw-0s-lxL"/>
                                     <barButtonItem style="plain" id="YHF-vB-Wgr">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Q9D-NM-Qoq">
-                                            <rect key="frame" x="330" y="7" width="64" height="30"/>
+                                            <rect key="frame" x="516" y="7" width="64" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -738,7 +780,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mcH-kZ-sqn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="94b-ic-NKl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
