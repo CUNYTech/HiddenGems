@@ -1,22 +1,18 @@
 //
-//  MyAccountViewController.swift
+//  ForgetPasswordVC.swift
 //  HiddenGems
 //
-//  Created by Melissa Rojas on 3/31/16.
+//  Created by Bryan Posso on 4/5/16.
 //  Copyright © 2016 Melissa Rojas. All rights reserved.
 //
 
 import UIKit
 
-class MyAccountViewController: UIViewController {
+class ForgetPasswordVC: UIViewController {
 
-    @IBOutlet weak var updateBox: UIView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateBox.layer.cornerRadius = 10
-        
+
         //Remove keyboard on touch
         self.hideKeyboardWhenTappedAround()
     }
@@ -31,9 +27,6 @@ class MyAccountViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
-    
-    
-    
 
     /*
     // MARK: - Navigation

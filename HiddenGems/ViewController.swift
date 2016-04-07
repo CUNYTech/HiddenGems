@@ -8,6 +8,18 @@
 
 import UIKit
 
+// Function to remove keyboard on touch
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController {
     
     
@@ -25,6 +37,8 @@ class ViewController: UIViewController {
         self.view.insertSubview(backgroundImage, atIndex: 0)
         self.logInBox.layer.cornerRadius = 10
         self.logInBox.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
+        self.hideKeyboardWhenTappedAround()
+        
         
     }
 
@@ -130,6 +144,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
     }
+    
+    
     
     
     

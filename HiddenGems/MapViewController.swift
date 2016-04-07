@@ -54,6 +54,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.findEvents.layer.cornerRadius = 10
         
+        //Remove keyboard on touch
+        self.hideKeyboardWhenTappedAround()
+        
         
 
     }
