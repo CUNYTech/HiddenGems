@@ -49,8 +49,7 @@ class GooglePlacesViewController: UIViewController, CLLocationManagerDelegate {
                 let marker = GMSMarker(position: coordinates)
                 marker.title = place.name
                 marker.map = self.googleMapView
-                
-                marker.icon = UIImage(named: "Visit Filled-50.png")
+                marker.icon = UIImage(named: "marker_purple.png")
                 self.googleMapView.animateToLocation(coordinates)
             } else {
                 print("No place was selected")
@@ -113,7 +112,7 @@ class GooglePlacesViewController: UIViewController, CLLocationManagerDelegate {
             let marker = GMSMarker(position: coordinates)
             marker.title = "I am here"
             marker.map = self.googleMapView
-            marker.icon = UIImage(named: "Visit Filled-50.png")
+            marker.icon = UIImage(named: "marker_red.png")
             self.googleMapView.animateToLocation(coordinates)
     }
     

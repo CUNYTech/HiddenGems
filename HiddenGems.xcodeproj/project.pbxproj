@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B71B85181CB45C1300669E20 /* HiddenGemData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B71B85161CB45C1300669E20 /* HiddenGemData.xcdatamodeld */; };
 		B7211A7B1CB4C389006DDB12 /* GooglePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */; };
+		B73693841CB73D2000EA485B /* Launch_Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B73693831CB73D2000EA485B /* Launch_Screen.png */; };
 		B7419BE91CB4C2180026DD68 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B7419BE81CB4C2180026DD68 /* Podfile */; };
 		B74A5B6D1C86A38B00E46425 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */; };
 		B756DDAD1CADF41B0005A612 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = B756DDA91CADF41B0005A612 /* face.png */; };
@@ -20,6 +21,8 @@
 		B75AB74A1CB02F5A000B878D /* Cocktail Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB7491CB02F5A000B878D /* Cocktail Filled-50.png */; };
 		B75AB74C1CB032FC000B878D /* Bear Footprint Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */; };
 		B75AB74E1CB0346D000B878D /* Deciduous Tree Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */; };
+		B787409F1CB710A10035E370 /* marker_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = B787409E1CB710A10035E370 /* marker_purple.png */; };
+		B78740A11CB710AA0035E370 /* marker_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B78740A01CB710AA0035E370 /* marker_red.png */; };
 		B78B65241CAB4F3200E903C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78B65221CAB4F3200E903C7 /* Main.storyboard */; };
 		B79D967F1CACF41B00043E99 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */; };
 		B79D96811CACFAB200043E99 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D96801CACFAB200043E99 /* MyAccountViewController.swift */; };
@@ -61,6 +64,7 @@
 		7B999F365FD75F02B0D3852E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B71B85171CB45C1300669E20 /* HiddenGemData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiddenGemData.xcdatamodel; sourceTree = "<group>"; };
 		B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesViewController.swift; sourceTree = "<group>"; };
+		B73693831CB73D2000EA485B /* Launch_Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Launch_Screen.png; path = Icons/Launch_Screen.png; sourceTree = SOURCE_ROOT; };
 		B7419BE81CB4C2180026DD68 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		B756DDA91CADF41B0005A612 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = face.png; path = Icons/face.png; sourceTree = SOURCE_ROOT; };
@@ -72,6 +76,8 @@
 		B75AB7491CB02F5A000B878D /* Cocktail Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cocktail Filled-50.png"; path = "Icons/Cocktail Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bear Footprint Filled-50.png"; path = "Icons/Bear Footprint Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Deciduous Tree Filled-50.png"; path = "Icons/Deciduous Tree Filled-50.png"; sourceTree = SOURCE_ROOT; };
+		B787409E1CB710A10035E370 /* marker_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_purple.png; path = Icons/marker_purple.png; sourceTree = SOURCE_ROOT; };
+		B78740A01CB710AA0035E370 /* marker_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_red.png; path = Icons/marker_red.png; sourceTree = SOURCE_ROOT; };
 		B78B65231CAB4F3200E903C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = ../PreferencesViewController.swift; sourceTree = "<group>"; };
 		B79D96801CACFAB200043E99 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 		B7E2B32D1C7CCC7700A57833 /* HiddenGems */ = {
 			isa = PBXGroup;
 			children = (
+				B78740A01CB710AA0035E370 /* marker_red.png */,
+				B787409E1CB710A10035E370 /* marker_purple.png */,
+				B73693831CB73D2000EA485B /* Launch_Screen.png */,
 				B7FCF60B1CB4DE46005AE72D /* Visit Filled-50.png */,
 				BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */,
 				B756DDA91CADF41B0005A612 /* face.png */,
@@ -318,11 +327,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78740A11CB710AA0035E370 /* marker_red.png in Resources */,
 				B75AB74E1CB0346D000B878D /* Deciduous Tree Filled-50.png in Resources */,
 				B75AB7481CB02E9F000B878D /* Restaurant Filled-50.png in Resources */,
 				B756DDB01CADF41B0005A612 /* settings.png in Resources */,
 				B75AB7461CB02D00000B878D /* Museum Filled-50.png in Resources */,
 				B75AB74C1CB032FC000B878D /* Bear Footprint Filled-50.png in Resources */,
+				B73693841CB73D2000EA485B /* Launch_Screen.png in Resources */,
 				B7E2B3391C7CCC7700A57833 /* LaunchScreen.storyboard in Resources */,
 				B7E2B3361C7CCC7700A57833 /* Assets.xcassets in Resources */,
 				B78B65241CAB4F3200E903C7 /* Main.storyboard in Resources */,
@@ -331,6 +342,7 @@
 				BA6FADA41C8FC2990053D9CB /* background1.png in Resources */,
 				B7419BE91CB4C2180026DD68 /* Podfile in Resources */,
 				B756DDAD1CADF41B0005A612 /* face.png in Resources */,
+				B787409F1CB710A10035E370 /* marker_purple.png in Resources */,
 				B75AB74A1CB02F5A000B878D /* Cocktail Filled-50.png in Resources */,
 				BA28B64F1CB47B38006E66A0 /* Kitesurfing Filled-50.png in Resources */,
 				B756DDAF1CADF41B0005A612 /* person.png in Resources */,
