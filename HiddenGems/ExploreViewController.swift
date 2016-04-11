@@ -20,7 +20,7 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
-        backgroundImage.image = UIImage(named: "background1.png")
+        backgroundImage.image = UIImage(named: "HiddenGemsBackground.png")
         self.view.insertSubview(backgroundImage, atIndex: 0)
     
 

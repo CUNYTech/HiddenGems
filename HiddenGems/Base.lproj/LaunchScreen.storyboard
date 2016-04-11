@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch_Screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-C2-z96">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HiddenGemsLaunch.png" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-C2-z96">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch_Screen.png" width="427" height="760"/>
+        <image name="HiddenGemsLaunch.png" width="433" height="768"/>
     </resources>
 </document>
