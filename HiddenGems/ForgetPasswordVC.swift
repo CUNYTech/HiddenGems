@@ -51,7 +51,9 @@ class ForgetPasswordVC: UIViewController {
     }
 
     func sendNotification() {
-        let url = NSURL 
+        let url = NSURL (string:"http://54.152.30.2/hg/sendnotification")
+        let session = NSURLSession.sharedSession()
+        let postParams = ["mobilenumber":self.mobileNumber.text!] as Dictionary<String, String>
     }
     /*
     // MARK: - Navigation
