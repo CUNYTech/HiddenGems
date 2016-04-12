@@ -844,6 +844,9 @@
                                 <state key="normal" title="Send verification code">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendNotification:" destination="bv0-Yl-pTe" eventType="touchUpInside" id="Kp0-Zn-WGQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile number to retrieve verification code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TW3-Ko-pS7">
                                 <rect key="frame" x="40" y="280" width="334" height="30"/>
@@ -861,10 +864,14 @@
                             <constraint firstItem="c4i-DL-zwM" firstAttribute="top" secondItem="TW3-Ko-pS7" secondAttribute="bottom" constant="8" id="Y8h-l4-6cO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mobileNumber" destination="TW3-Ko-pS7" id="tlH-s0-Hl4"/>
+                        <outlet property="sendNotification" destination="c4i-DL-zwM" id="2tE-Zu-v7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SC0-wq-8ho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563" y="-690"/>
+            <point key="canvasLocation" x="563" y="-726"/>
         </scene>
     </scenes>
     <resources>

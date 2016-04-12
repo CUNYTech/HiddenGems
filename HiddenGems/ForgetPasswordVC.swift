@@ -27,7 +27,32 @@ class ForgetPasswordVC: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
+    
+    
+    @IBOutlet weak var mobileNumber: UITextField!
+    @IBOutlet weak var sendNotification: UIButton!
+   
+    @IBAction func sendNotification(sender: AnyObject) {
+        if (self.mobileNumber.text!.isEmpty) {
+            
+            let alert = UIAlertView()
+            alert.title = "Empty field"
+            alert.message = "Please enter information in text box"
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+            
+        }else{
+            
+            sendNotification()
+            
+        }
+        
+        
+    }
 
+    func sendNotification() {
+        let url = NSURL 
+    }
     /*
     // MARK: - Navigation
 
