@@ -38,6 +38,13 @@
 		B7E2B3441C7CCC7700A57833 /* HiddenGemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2B3431C7CCC7700A57833 /* HiddenGemsTests.swift */; };
 		B7E2B34F1C7CCC7700A57833 /* HiddenGemsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2B34E1C7CCC7700A57833 /* HiddenGemsUITests.swift */; };
 		B7E2B35F1C7CE51A00A57833 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2B35E1C7CE51A00A57833 /* MapViewController.swift */; };
+
+		B7EB1EDD1C9A601800FF1C11 /* iph6&s.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EB1EDC1C9A601800FF1C11 /* iph6&s.png */; };
+		BA28B64F1CB47B38006E66A0 /* Kitesurfing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */; };
+		BA2C97E11CB48F5F007E49A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */; };
+		BA2C97E31CB49B70007E49A8 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */; };
+		BA6FADA41C8FC2990053D9CB /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6FADA31C8FC2990053D9CB /* background1.png */; };
+
 		BA6FADAB1C90FE7F0053D9CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */; };
 		FE5CB2AE55052D421DDB7C2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3310CB699C1480787682D1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -100,6 +107,13 @@
 		B7E2B34E1C7CCC7700A57833 /* HiddenGemsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenGemsUITests.swift; sourceTree = "<group>"; };
 		B7E2B3501C7CCC7700A57833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E2B35E1C7CE51A00A57833 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+
+		B7EB1EDC1C9A601800FF1C11 /* iph6&s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iph6&s.png"; sourceTree = SOURCE_ROOT; };
+		BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kitesurfing Filled-50.png"; sourceTree = SOURCE_ROOT; };
+		BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		BA6FADA31C8FC2990053D9CB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = SOURCE_ROOT; };
+
 		BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +207,7 @@
 				BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */,
 				B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */,
 				B71B85161CB45C1300669E20 /* HiddenGemData.xcdatamodeld */,
+				BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */,
 			);
 			path = HiddenGems;
 			sourceTree = "<group>";
@@ -350,6 +365,10 @@
 				B71532341CBAE73D0004827C /* iph6&s.png in Resources */,
 				B71532321CBAE61F0004827C /* iph6120.png in Resources */,
 				B75AB74A1CB02F5A000B878D /* Cocktail Filled-50.png in Resources */,
+
+				BA28B64F1CB47B38006E66A0 /* Kitesurfing Filled-50.png in Resources */,
+				BA2C97E11CB48F5F007E49A8 /* Default-568h@2x.png in Resources */,
+
 				B756DDAF1CADF41B0005A612 /* person.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +444,7 @@
 			files = (
 				B7211A7B1CB4C389006DDB12 /* GooglePlacesViewController.swift in Sources */,
 				B74A5B6D1C86A38B00E46425 /* ExploreViewController.swift in Sources */,
+				BA2C97E31CB49B70007E49A8 /* ForgetPasswordVC.swift in Sources */,
 				B71B85181CB45C1300669E20 /* HiddenGemData.xcdatamodeld in Sources */,
 				BA6FADAB1C90FE7F0053D9CB /* RegisterViewController.swift in Sources */,
 				B7E2B3311C7CCC7700A57833 /* ViewController.swift in Sources */,

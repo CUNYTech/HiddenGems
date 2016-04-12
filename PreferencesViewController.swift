@@ -19,8 +19,9 @@ class PreferencesViewController: UIViewController {
         super.viewDidLoad()
         
         categoriesBox.layer.cornerRadius = 10
-
-        // Do any additional setup after loading the view.
+        
+        //Remove keyboard on touch
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {

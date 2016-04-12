@@ -22,6 +22,9 @@ class ExploreViewController: UIViewController {
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
         backgroundImage.image = UIImage(named: "HiddenGemsBackground.png")
         self.view.insertSubview(backgroundImage, atIndex: 0)
+        
+        //Remove keyboard on touch
+        self.hideKeyboardWhenTappedAround()
     
 
     }
