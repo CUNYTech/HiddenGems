@@ -82,7 +82,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="bv0-Yl-pTe" kind="show" id="t7X-SH-Rbw"/>
+                                            <segue destination="bv0-Yl-pTe" kind="show" id="qS8-AH-ucm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -862,7 +862,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paY-Xx-x7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="105"/>
+            <point key="canvasLocation" x="-327" y="12"/>
         </scene>
         <!--Forget PasswordVC-->
         <scene sceneID="Ucb-dn-mD2">
@@ -906,7 +906,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SC0-wq-8ho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563" y="-690"/>
+            <point key="canvasLocation" x="538" y="-772"/>
         </scene>
     </scenes>
     <resources>
