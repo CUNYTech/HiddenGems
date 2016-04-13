@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B715322C1CBACA620004827C /* HiddenGemsLaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = B715322B1CBACA620004827C /* HiddenGemsLaunch.png */; };
+		B71532311CBAE61F0004827C /* iph6s180.png in Resources */ = {isa = PBXBuildFile; fileRef = B715322F1CBAE61F0004827C /* iph6s180.png */; };
+		B71532321CBAE61F0004827C /* iph6120.png in Resources */ = {isa = PBXBuildFile; fileRef = B71532301CBAE61F0004827C /* iph6120.png */; };
+		B71532341CBAE73D0004827C /* iph6&s.png in Resources */ = {isa = PBXBuildFile; fileRef = B71532331CBAE73D0004827C /* iph6&s.png */; };
 		B71B85181CB45C1300669E20 /* HiddenGemData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B71B85161CB45C1300669E20 /* HiddenGemData.xcdatamodeld */; };
+		B7211A7B1CB4C389006DDB12 /* GooglePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */; };
+		B7419BE91CB4C2180026DD68 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B7419BE81CB4C2180026DD68 /* Podfile */; };
 		B74A5B6D1C86A38B00E46425 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */; };
 		B756DDAD1CADF41B0005A612 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = B756DDA91CADF41B0005A612 /* face.png */; };
 		B756DDAF1CADF41B0005A612 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = B756DDAB1CADF41B0005A612 /* person.png */; };
@@ -18,7 +24,11 @@
 		B75AB74A1CB02F5A000B878D /* Cocktail Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB7491CB02F5A000B878D /* Cocktail Filled-50.png */; };
 		B75AB74C1CB032FC000B878D /* Bear Footprint Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */; };
 		B75AB74E1CB0346D000B878D /* Deciduous Tree Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */; };
+		B75E0B1D1CBDC2D2002254DA /* Kitesurfing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */; };
+		B787409F1CB710A10035E370 /* marker_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = B787409E1CB710A10035E370 /* marker_purple.png */; };
+		B78740A11CB710AA0035E370 /* marker_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B78740A01CB710AA0035E370 /* marker_red.png */; };
 		B78B65241CAB4F3200E903C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78B65221CAB4F3200E903C7 /* Main.storyboard */; };
+		B78C23871CBB0C18001D119E /* HiddenGemsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B78C23861CBB0C18001D119E /* HiddenGemsBackground.png */; };
 		B79D967F1CACF41B00043E99 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */; };
 		B79D96811CACFAB200043E99 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D96801CACFAB200043E99 /* MyAccountViewController.swift */; };
 		B7E2B32F1C7CCC7700A57833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2B32E1C7CCC7700A57833 /* AppDelegate.swift */; };
@@ -28,12 +38,12 @@
 		B7E2B3441C7CCC7700A57833 /* HiddenGemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2B3431C7CCC7700A57833 /* HiddenGemsTests.swift */; };
 		B7E2B34F1C7CCC7700A57833 /* HiddenGemsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2B34E1C7CCC7700A57833 /* HiddenGemsUITests.swift */; };
 		B7E2B35F1C7CE51A00A57833 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2B35E1C7CE51A00A57833 /* MapViewController.swift */; };
-		B7EB1EDD1C9A601800FF1C11 /* iph6&s.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EB1EDC1C9A601800FF1C11 /* iph6&s.png */; };
 		BA28B64F1CB47B38006E66A0 /* Kitesurfing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */; };
 		BA2C97E11CB48F5F007E49A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */; };
 		BA2C97E31CB49B70007E49A8 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */; };
-		BA6FADA41C8FC2990053D9CB /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6FADA31C8FC2990053D9CB /* background1.png */; };
+
 		BA6FADAB1C90FE7F0053D9CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */; };
+		FE5CB2AE55052D421DDB7C2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3310CB699C1480787682D1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +64,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D3310CB699C1480787682D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41BB09FFBC376674DB3D1ED6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7B999F365FD75F02B0D3852E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B715322B1CBACA620004827C /* HiddenGemsLaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HiddenGemsLaunch.png; path = Icons/HiddenGemsLaunch.png; sourceTree = SOURCE_ROOT; };
+		B715322F1CBAE61F0004827C /* iph6s180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iph6s180.png; path = Icons/iph6s180.png; sourceTree = SOURCE_ROOT; };
+		B71532301CBAE61F0004827C /* iph6120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iph6120.png; path = Icons/iph6120.png; sourceTree = SOURCE_ROOT; };
+		B71532331CBAE73D0004827C /* iph6&s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iph6&s.png"; path = "Icons/iph6&s.png"; sourceTree = SOURCE_ROOT; };
 		B71B85171CB45C1300669E20 /* HiddenGemData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiddenGemData.xcdatamodel; sourceTree = "<group>"; };
+		B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesViewController.swift; sourceTree = "<group>"; };
+		B7419BE81CB4C2180026DD68 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		B756DDA91CADF41B0005A612 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = face.png; path = Icons/face.png; sourceTree = SOURCE_ROOT; };
 		B756DDAB1CADF41B0005A612 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = person.png; path = Icons/person.png; sourceTree = SOURCE_ROOT; };
@@ -65,7 +84,11 @@
 		B75AB7491CB02F5A000B878D /* Cocktail Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cocktail Filled-50.png"; path = "Icons/Cocktail Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bear Footprint Filled-50.png"; path = "Icons/Bear Footprint Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Deciduous Tree Filled-50.png"; path = "Icons/Deciduous Tree Filled-50.png"; sourceTree = SOURCE_ROOT; };
+		B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kitesurfing Filled-50.png"; path = "Icons/Kitesurfing Filled-50.png"; sourceTree = SOURCE_ROOT; };
+		B787409E1CB710A10035E370 /* marker_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_purple.png; path = Icons/marker_purple.png; sourceTree = SOURCE_ROOT; };
+		B78740A01CB710AA0035E370 /* marker_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_red.png; path = Icons/marker_red.png; sourceTree = SOURCE_ROOT; };
 		B78B65231CAB4F3200E903C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B78C23861CBB0C18001D119E /* HiddenGemsBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HiddenGemsBackground.png; path = Icons/HiddenGemsBackground.png; sourceTree = SOURCE_ROOT; };
 		B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = ../PreferencesViewController.swift; sourceTree = "<group>"; };
 		B79D96801CACFAB200043E99 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		B7E2B32B1C7CCC7700A57833 /* HiddenGems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenGems.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,11 +104,9 @@
 		B7E2B34E1C7CCC7700A57833 /* HiddenGemsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenGemsUITests.swift; sourceTree = "<group>"; };
 		B7E2B3501C7CCC7700A57833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E2B35E1C7CE51A00A57833 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		B7EB1EDC1C9A601800FF1C11 /* iph6&s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iph6&s.png"; sourceTree = SOURCE_ROOT; };
 		BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kitesurfing Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
-		BA6FADA31C8FC2990053D9CB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = SOURCE_ROOT; };
 		BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE5CB2AE55052D421DDB7C2A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,14 +136,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F17F98E537CF79EC43637B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D3310CB699C1480787682D1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7E2B3221C7CCC7700A57833 = {
 			isa = PBXGroup;
 			children = (
-				BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */,
+
+				B7419BE81CB4C2180026DD68 /* Podfile */,
 				B7E2B32D1C7CCC7700A57833 /* HiddenGems */,
 				B7E2B3421C7CCC7700A57833 /* HiddenGemsTests */,
 				B7E2B34D1C7CCC7700A57833 /* HiddenGemsUITests */,
 				B7E2B32C1C7CCC7700A57833 /* Products */,
+				CA943B3DD407FCF69ACCBD8C /* Pods */,
+				4F17F98E537CF79EC43637B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,18 +171,23 @@
 		B7E2B32D1C7CCC7700A57833 /* HiddenGems */ = {
 			isa = PBXGroup;
 			children = (
-				BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */,
+				B715322B1CBACA620004827C /* HiddenGemsLaunch.png */,
+				B78C23861CBB0C18001D119E /* HiddenGemsBackground.png */,
+				B78740A01CB710AA0035E370 /* marker_red.png */,
+				B787409E1CB710A10035E370 /* marker_purple.png */,
 				B756DDA91CADF41B0005A612 /* face.png */,
 				B756DDAB1CADF41B0005A612 /* person.png */,
 				B756DDB11CADF8640005A612 /* logout-2.png */,
 				B756DDAC1CADF41B0005A612 /* settings.png */,
-				B7EB1EDC1C9A601800FF1C11 /* iph6&s.png */,
+				B71532331CBAE73D0004827C /* iph6&s.png */,
+				B715322F1CBAE61F0004827C /* iph6s180.png */,
+				B71532301CBAE61F0004827C /* iph6120.png */,
 				B75AB7451CB02D00000B878D /* Museum Filled-50.png */,
 				B75AB7471CB02E9F000B878D /* Restaurant Filled-50.png */,
 				B75AB7491CB02F5A000B878D /* Cocktail Filled-50.png */,
 				B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */,
 				B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */,
-				BA6FADA31C8FC2990053D9CB /* background1.png */,
+				B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */,
 				B78B65221CAB4F3200E903C7 /* Main.storyboard */,
 				B7E2B3351C7CCC7700A57833 /* Assets.xcassets */,
 				B7E2B3371C7CCC7700A57833 /* LaunchScreen.storyboard */,
@@ -161,6 +199,7 @@
 				B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */,
 				B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */,
 				BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */,
+				B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */,
 				B71B85161CB45C1300669E20 /* HiddenGemData.xcdatamodeld */,
 				BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */,
 			);
@@ -185,6 +224,15 @@
 			path = HiddenGemsUITests;
 			sourceTree = "<group>";
 		};
+		CA943B3DD407FCF69ACCBD8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41BB09FFBC376674DB3D1ED6 /* Pods.debug.xcconfig */,
+				7B999F365FD75F02B0D3852E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E2B3531C7CCC7700A57833 /* Build configuration list for PBXNativeTarget "HiddenGems" */;
 			buildPhases = (
+				6CC3D21718F94509C0B85E0E /* Check Pods Manifest.lock */,
 				B7E2B3271C7CCC7700A57833 /* Sources */,
 				B7E2B3281C7CCC7700A57833 /* Frameworks */,
 				B7E2B3291C7CCC7700A57833 /* Resources */,
+				8DFE5DFC5A400F5AB79FA5C8 /* Embed Pods Frameworks */,
+				8600B10EDDFE8111914EEB3A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,22 +339,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78740A11CB710AA0035E370 /* marker_red.png in Resources */,
 				B75AB74E1CB0346D000B878D /* Deciduous Tree Filled-50.png in Resources */,
+				B75E0B1D1CBDC2D2002254DA /* Kitesurfing Filled-50.png in Resources */,
 				B75AB7481CB02E9F000B878D /* Restaurant Filled-50.png in Resources */,
 				B756DDB01CADF41B0005A612 /* settings.png in Resources */,
 				B75AB7461CB02D00000B878D /* Museum Filled-50.png in Resources */,
+				B71532311CBAE61F0004827C /* iph6s180.png in Resources */,
+				B78C23871CBB0C18001D119E /* HiddenGemsBackground.png in Resources */,
 				B75AB74C1CB032FC000B878D /* Bear Footprint Filled-50.png in Resources */,
 				B7E2B3391C7CCC7700A57833 /* LaunchScreen.storyboard in Resources */,
 				B7E2B3361C7CCC7700A57833 /* Assets.xcassets in Resources */,
 				B78B65241CAB4F3200E903C7 /* Main.storyboard in Resources */,
 				B756DDB21CADF8640005A612 /* logout-2.png in Resources */,
-				BA6FADA41C8FC2990053D9CB /* background1.png in Resources */,
+				B7419BE91CB4C2180026DD68 /* Podfile in Resources */,
 				B756DDAD1CADF41B0005A612 /* face.png in Resources */,
+				B715322C1CBACA620004827C /* HiddenGemsLaunch.png in Resources */,
+				B787409F1CB710A10035E370 /* marker_purple.png in Resources */,
+				B71532341CBAE73D0004827C /* iph6&s.png in Resources */,
+				B71532321CBAE61F0004827C /* iph6120.png in Resources */,
 				B75AB74A1CB02F5A000B878D /* Cocktail Filled-50.png in Resources */,
 				BA28B64F1CB47B38006E66A0 /* Kitesurfing Filled-50.png in Resources */,
 				BA2C97E11CB48F5F007E49A8 /* Default-568h@2x.png in Resources */,
 				B756DDAF1CADF41B0005A612 /* person.png in Resources */,
-				B7EB1EDD1C9A601800FF1C11 /* iph6&s.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +381,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CC3D21718F94509C0B85E0E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8600B10EDDFE8111914EEB3A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DFE5DFC5A400F5AB79FA5C8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B7E2B3271C7CCC7700A57833 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7211A7B1CB4C389006DDB12 /* GooglePlacesViewController.swift in Sources */,
 				B74A5B6D1C86A38B00E46425 /* ExploreViewController.swift in Sources */,
 				BA2C97E31CB49B70007E49A8 /* ForgetPasswordVC.swift in Sources */,
 				B71B85181CB45C1300669E20 /* HiddenGemData.xcdatamodeld in Sources */,
@@ -427,7 +534,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -466,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,6 +583,7 @@
 		};
 		B7E2B3541C7CCC7700A57833 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BB09FFBC376674DB3D1ED6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HiddenGems/Info.plist;
@@ -488,6 +596,7 @@
 		};
 		B7E2B3551C7CCC7700A57833 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B999F365FD75F02B0D3852E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HiddenGems/Info.plist;
