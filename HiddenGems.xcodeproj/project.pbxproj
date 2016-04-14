@@ -41,8 +41,8 @@
 		BA28B64F1CB47B38006E66A0 /* Kitesurfing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */; };
 		BA2C97E11CB48F5F007E49A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */; };
 		BA2C97E31CB49B70007E49A8 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */; };
-
 		BA6FADAB1C90FE7F0053D9CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */; };
+		BA8A99611CC0045100961373 /* bp_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8A99601CC0045100961373 /* bp_icon.png */; };
 		FE5CB2AE55052D421DDB7C2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3310CB699C1480787682D1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +108,7 @@
 		BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BA8A99601CC0045100961373 /* bp_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bp_icon.png; path = Icons/bp_icon.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +148,6 @@
 		B7E2B3221C7CCC7700A57833 = {
 			isa = PBXGroup;
 			children = (
-
 				B7419BE81CB4C2180026DD68 /* Podfile */,
 				B7E2B32D1C7CCC7700A57833 /* HiddenGems */,
 				B7E2B3421C7CCC7700A57833 /* HiddenGemsTests */,
@@ -181,6 +181,7 @@
 				B756DDAC1CADF41B0005A612 /* settings.png */,
 				B71532331CBAE73D0004827C /* iph6&s.png */,
 				B715322F1CBAE61F0004827C /* iph6s180.png */,
+				BA8A99601CC0045100961373 /* bp_icon.png */,
 				B71532301CBAE61F0004827C /* iph6120.png */,
 				B75AB7451CB02D00000B878D /* Museum Filled-50.png */,
 				B75AB7471CB02E9F000B878D /* Restaurant Filled-50.png */,
@@ -347,6 +348,7 @@
 				B75AB7461CB02D00000B878D /* Museum Filled-50.png in Resources */,
 				B71532311CBAE61F0004827C /* iph6s180.png in Resources */,
 				B78C23871CBB0C18001D119E /* HiddenGemsBackground.png in Resources */,
+				BA8A99611CC0045100961373 /* bp_icon.png in Resources */,
 				B75AB74C1CB032FC000B878D /* Bear Footprint Filled-50.png in Resources */,
 				B7E2B3391C7CCC7700A57833 /* LaunchScreen.storyboard in Resources */,
 				B7E2B3361C7CCC7700A57833 /* Assets.xcassets in Resources */,
