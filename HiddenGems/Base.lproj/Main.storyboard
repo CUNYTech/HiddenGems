@@ -408,11 +408,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v0k-mm-0Op">
-                                <rect key="frame" x="16" y="72" width="386" height="644"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0k-mm-0Op">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nME-m0-UHo">
-                                        <rect key="frame" x="62" y="568" width="250" height="33"/>
+                                        <rect key="frame" x="78" y="576" width="250" height="33"/>
                                         <color key="backgroundColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="XNv-R9-h1l"/>
@@ -425,8 +425,8 @@
                                             <action selector="registerButton:" destination="xMv-ni-erc" eventType="touchUpInside" id="yUH-63-CyK"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Museums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-Ms-0dm">
-                                        <rect key="frame" x="115" y="198" width="93" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Museums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-Ms-0dm">
+                                        <rect key="frame" x="131" y="206" width="93" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="xdb-4s-Klz"/>
                                         </constraints>
@@ -435,94 +435,94 @@
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozw-z2-V28">
-                                        <rect key="frame" x="276" y="198" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozw-z2-V28">
+                                        <rect key="frame" x="292" y="206" width="51" height="31"/>
                                         <color key="tintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="onTintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Museum Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="PWT-nh-MCc">
-                                        <rect key="frame" x="61" y="194" width="35" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Museum Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="PWT-nh-MCc">
+                                        <rect key="frame" x="77" y="202" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="9D0-61-YxC"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR2-zn-nAK">
-                                        <rect key="frame" x="115" y="252" width="133" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR2-zn-nAK">
+                                        <rect key="frame" x="131" y="260" width="133" height="23"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPc-Px-jU2">
-                                        <rect key="frame" x="276" y="253" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPc-Px-jU2">
+                                        <rect key="frame" x="292" y="261" width="51" height="31"/>
                                         <color key="tintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="onTintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Restaurant Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="O7u-q8-ecL">
-                                        <rect key="frame" x="61" y="249" width="35" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Restaurant Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="O7u-q8-ecL">
+                                        <rect key="frame" x="77" y="257" width="35" height="35"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Night Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqN-0L-jrc">
-                                        <rect key="frame" x="115" y="306" width="121" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqN-0L-jrc">
+                                        <rect key="frame" x="131" y="314" width="121" height="23"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0a-1v-gGN">
-                                        <rect key="frame" x="276" y="307" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0a-1v-gGN">
+                                        <rect key="frame" x="292" y="315" width="51" height="31"/>
                                         <color key="tintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="onTintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Cocktail Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbH-CH-GVn">
-                                        <rect key="frame" x="61" y="303" width="35" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cocktail Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="YbH-CH-GVn">
+                                        <rect key="frame" x="77" y="311" width="35" height="35"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wild life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4r-V3-vZT">
-                                        <rect key="frame" x="115" y="362" width="109" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wild life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4r-V3-vZT">
+                                        <rect key="frame" x="131" y="370" width="109" height="23"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMK-6V-9lX">
-                                        <rect key="frame" x="276" y="363" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMK-6V-9lX">
+                                        <rect key="frame" x="292" y="371" width="51" height="31"/>
                                         <color key="tintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="onTintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Bear Footprint Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-Q1-aO3">
-                                        <rect key="frame" x="61" y="359" width="35" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bear Footprint Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-Q1-aO3">
+                                        <rect key="frame" x="77" y="367" width="35" height="35"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Outdoors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQS-k2-Qxn">
-                                        <rect key="frame" x="115" y="414" width="97" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outdoors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQS-k2-Qxn">
+                                        <rect key="frame" x="131" y="422" width="97" height="23"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-OM-TTX">
-                                        <rect key="frame" x="276" y="415" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-OM-TTX">
+                                        <rect key="frame" x="292" y="423" width="51" height="31"/>
                                         <color key="tintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="onTintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Deciduous Tree Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCh-cp-F2j">
-                                        <rect key="frame" x="61" y="411" width="35" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Deciduous Tree Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCh-cp-F2j">
+                                        <rect key="frame" x="77" y="419" width="35" height="35"/>
                                     </imageView>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ka2-sJ-qUN">
-                                        <rect key="frame" x="276" y="469" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ka2-sJ-qUN">
+                                        <rect key="frame" x="292" y="477" width="51" height="31"/>
                                         <color key="tintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="onTintColor" red="0.47450980390000003" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Kitesurfing Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="HIO-Vg-cyf">
-                                        <rect key="frame" x="61" y="465" width="35" height="35"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kitesurfing Filled-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="HIO-Vg-cyf">
+                                        <rect key="frame" x="77" y="473" width="35" height="35"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-MU-4Gx">
-                                        <rect key="frame" x="115" y="468" width="73" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-MU-4Gx">
+                                        <rect key="frame" x="131" y="476" width="73" height="23"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you interested in?" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brk-E9-bKq">
-                                        <rect key="frame" x="28" y="133" width="330" height="46"/>
+                                        <rect key="frame" x="44" y="141" width="330" height="46"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -542,8 +542,8 @@
                                     <constraint firstItem="dCh-cp-F2j" firstAttribute="trailing" secondItem="HIO-Vg-cyf" secondAttribute="trailing" id="EFV-5W-VkP"/>
                                     <constraint firstItem="b0a-1v-gGN" firstAttribute="top" secondItem="uPc-Px-jU2" secondAttribute="bottom" constant="23" id="GPe-lW-bgN"/>
                                     <constraint firstItem="O7u-q8-ecL" firstAttribute="top" secondItem="PWT-nh-MCc" secondAttribute="bottom" constant="20" id="Hs9-nr-Y4F"/>
-                                    <constraint firstItem="PWT-nh-MCc" firstAttribute="leading" secondItem="v0k-mm-0Op" secondAttribute="leading" constant="61" id="JOS-eE-RGA"/>
-                                    <constraint firstItem="PWT-nh-MCc" firstAttribute="top" secondItem="v0k-mm-0Op" secondAttribute="top" constant="83" id="JU7-Kx-6q1"/>
+                                    <constraint firstItem="PWT-nh-MCc" firstAttribute="leading" secondItem="v0k-mm-0Op" secondAttribute="leading" constant="77" id="JOS-eE-RGA"/>
+                                    <constraint firstItem="PWT-nh-MCc" firstAttribute="top" secondItem="v0k-mm-0Op" secondAttribute="top" constant="202" id="JU7-Kx-6q1"/>
                                     <constraint firstItem="b0a-1v-gGN" firstAttribute="bottom" secondItem="YbH-CH-GVn" secondAttribute="bottom" id="Kil-lQ-UgB"/>
                                     <constraint firstItem="nME-m0-UHo" firstAttribute="top" secondItem="HIO-Vg-cyf" secondAttribute="bottom" constant="68" id="LJU-OM-gMx"/>
                                     <constraint firstItem="yG0-Q1-aO3" firstAttribute="leading" secondItem="YbH-CH-GVn" secondAttribute="leading" id="PbN-xh-w1K"/>
@@ -573,7 +573,7 @@
                                     <constraint firstItem="xR2-zn-nAK" firstAttribute="top" secondItem="sCi-Ms-0dm" secondAttribute="bottom" constant="33" id="khR-Lx-ws5"/>
                                     <constraint firstItem="ozw-z2-V28" firstAttribute="bottom" secondItem="PWT-nh-MCc" secondAttribute="bottom" id="pCp-I9-zq5"/>
                                     <constraint firstItem="NMK-6V-9lX" firstAttribute="top" secondItem="b0a-1v-gGN" secondAttribute="bottom" constant="25" id="pHM-pw-TgB"/>
-                                    <constraint firstItem="sCi-Ms-0dm" firstAttribute="top" secondItem="v0k-mm-0Op" secondAttribute="top" constant="87" id="sIa-JO-4rR"/>
+                                    <constraint firstItem="sCi-Ms-0dm" firstAttribute="top" secondItem="v0k-mm-0Op" secondAttribute="top" constant="206" id="sIa-JO-4rR"/>
                                     <constraint firstItem="dCh-cp-F2j" firstAttribute="leading" secondItem="HIO-Vg-cyf" secondAttribute="leading" id="wPl-Sc-cPZ"/>
                                     <constraint firstItem="AQS-k2-Qxn" firstAttribute="top" secondItem="C4r-V3-vZT" secondAttribute="bottom" constant="29" id="wcD-5A-smw"/>
                                     <constraint firstItem="NMK-6V-9lX" firstAttribute="bottom" secondItem="yG0-Q1-aO3" secondAttribute="bottom" id="xrj-DC-qOv"/>
@@ -594,11 +594,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="2r4-Yt-qeM" secondAttribute="trailing" constant="16" id="Gpy-hL-PfS"/>
-                            <constraint firstItem="v0k-mm-0Op" firstAttribute="leading" secondItem="REq-8L-cG8" secondAttribute="leadingMargin" constant="-4" id="JHs-gz-ZgM"/>
-                            <constraint firstAttribute="bottom" secondItem="v0k-mm-0Op" secondAttribute="bottom" constant="20" symbolic="YES" id="SLX-HF-0Gn"/>
+                            <constraint firstItem="v0k-mm-0Op" firstAttribute="leading" secondItem="REq-8L-cG8" secondAttribute="leadingMargin" constant="-20" id="JHs-gz-ZgM"/>
+                            <constraint firstAttribute="bottom" secondItem="v0k-mm-0Op" secondAttribute="bottom" id="SLX-HF-0Gn"/>
                             <constraint firstItem="2r4-Yt-qeM" firstAttribute="top" secondItem="voD-ku-HcU" secondAttribute="bottom" constant="28" id="TxW-Gg-8aq"/>
-                            <constraint firstItem="v0k-mm-0Op" firstAttribute="top" secondItem="2r4-Yt-qeM" secondAttribute="bottom" constant="8" symbolic="YES" id="XMK-RT-r5G"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="v0k-mm-0Op" secondAttribute="trailing" constant="-8" id="uBA-J1-5Ma"/>
+                            <constraint firstItem="v0k-mm-0Op" firstAttribute="top" secondItem="2r4-Yt-qeM" secondAttribute="bottom" constant="-111" id="XMK-RT-r5G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v0k-mm-0Op" secondAttribute="trailing" constant="-20" id="uBA-J1-5Ma"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
