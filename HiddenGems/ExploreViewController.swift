@@ -31,7 +31,9 @@ class ExploreViewController: UIViewController {
         
         //Display user in label
         
-        displayUsername.text = "welcome, " + receivedUser
+        displayUsername.text = "welcome, " + user
+        
+        print("THE USER IS: " + user)
         
         //Remove keyboard on touch
         self.hideKeyboardWhenTappedAround()
@@ -42,7 +44,7 @@ class ExploreViewController: UIViewController {
     
     @IBAction func logoutButton(sender: UIButton) {
         
-        /*
+        
         //refers to AppDelegate
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -77,7 +79,8 @@ class ExploreViewController: UIViewController {
             print("Error fetching")
         }
         
-*/
+        user = ""
+
         
     }
 

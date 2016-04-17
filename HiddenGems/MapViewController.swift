@@ -107,7 +107,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
        // self.locationManager.stopUpdatingLocation()
         
-        print(myLocation?.coordinate.latitude)
+        //print(myLocation?.coordinate.latitude)
         
         if(xloc != myLocation?.coordinate.latitude || xloc == nil){
             xloc = myLocation!.coordinate.latitude
@@ -130,27 +130,27 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let date : String = dateFormatter.stringFromDate(NSDate())
         
         let baseURL : NSString = "https://api.foursquare.com/v2/venues/explore?ll="+String(xloc)+","+String(yloc) as NSString
-        print("This is the baseURL " + (baseURL as String))
+        //print("This is the baseURL " + (baseURL as String))
         
         let creds : NSString = "&client_id="+fqClient_id+"&client_secret="+fqClient_secret+"&v="+date as NSString
-        print("This are the credentials " + (creds as String))
+        //print("This are the credentials " + (creds as String))
         
         let radius : NSString = "&radius="+String(radiusText.text!)+"&limit=50" as NSString
-        print("This is the given radius " + (radius as String))
+        //print("This is the given radius " + (radius as String))
         
         let venues : NSString = (baseURL as String) + (creds as String) + (radius as String) as NSString
-        print("This is the list or venues" + (venues as String))
+        //print("This is the list or venues" + (venues as String))
         
         
         //venues url!
         let venuesURL = NSURL(string: venues as String)
-        print("This is the venues URL " + String(venuesURL))
+        //print("This is the venues URL " + String(venuesURL))
         
         
         
         if let url = venuesURL {
             
-            print("this is URL: " + String(url) + "\n")
+            //print("this is URL: " + String(url) + "\n")
             
             //create session
             let session = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
@@ -186,15 +186,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                         
                         let groups = response["groups"] as! NSArray
                         
-                        print("This is groups: " + String(groups.count))
+                        //print("This is groups: " + String(groups.count))
                         
                         let items = groups[0] as! NSDictionary
                         
-                        print("This is items: " + String(items.count))
+                        //print("This is items: " + String(items.count))
                         
                         let venues = items["items"] as! NSArray
                         
-                        print("These are the venues: " + String(venues.count))
+                        //print("These are the venues: " + String(venues.count))
                         
                         dispatch_async(dispatch_get_main_queue(), {() -> Void in
                             exploreVenueList = venues
@@ -229,7 +229,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.mapView.removeAnnotations(allAnnotations)
         
         if exploreVenueList != nil {
-            print("Explore list count : " + String(exploreVenueList.count))
+            //print("Explore list count : " + String(exploreVenueList.count))
             
             for venue in exploreVenueList{
                 let location = (venue["venue"] as! NSDictionary)["location"] as! NSDictionary
@@ -316,6 +316,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
+    //Show NavigationBar.
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+    }
+    
+    
    /* @IBAction func DrawCircle(sender: UIButton) {
         
         
@@ -327,10 +333,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 }
     
     
-    //Show NavigationBar.
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
-    }
+   
     
     
     

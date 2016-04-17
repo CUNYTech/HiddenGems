@@ -599,6 +599,7 @@
         <!--MapGooglePlaces-->
         <scene sceneID="NAB-Vj-KwC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZK-Jm-bqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="MapGooglePlaces" id="Bzk-EU-F5T" customClass="GooglePlacesViewController" customModule="HiddenGems" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PWf-Um-RDC"/>
@@ -634,7 +635,6 @@
                         <outlet property="mapViewContainer" destination="vFl-Qk-rQq" id="mFJ-GO-Emd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CZK-Jm-bqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1109" y="1812"/>
         </scene>
@@ -825,9 +825,6 @@
                                             <state key="normal" title=" Find Events ">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
-                                            <connections>
-                                                <segue destination="oJx-te-O16" kind="show" id="Q9G-nP-pIE"/>
-                                            </connections>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="arN-tj-cLh"/>
@@ -865,6 +862,14 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="u3k-yD-7OX">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JBT-Px-1Dg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Nearby" id="xeY-ed-c6H">
+                            <connections>
+                                <segue destination="6Zj-G7-pEL" kind="show" id="eKq-n3-Cyd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
@@ -878,34 +883,33 @@
             </objects>
             <point key="canvasLocation" x="1109" y="968"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xyv-ME-vFZ">
+        <!--Nearby View Controller-->
+        <scene sceneID="E6M-hk-BLd">
             <objects>
-                <viewController id="oJx-te-O16" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bct-dy-GZ5"/>
-                        <viewControllerLayoutGuide type="bottom" id="mcH-kZ-sqn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="94b-ic-NKl">
+                <tableViewController id="6Zj-G7-pEL" customClass="NearbyViewController" customModule="HiddenGems" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9oU-mK-rMm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="wyw-RV-eFz" id="ti1-hr-l8n"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xch-dQ-fEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="wyw-RV-eFz">
-                    <connections>
-                        <outlet property="delegate" destination="oJx-te-O16" id="O2y-P6-HQv"/>
-                        <outlet property="searchContentsController" destination="oJx-te-O16" id="peN-DI-Rts"/>
-                        <outlet property="searchResultsDataSource" destination="oJx-te-O16" id="bxS-9f-PtI"/>
-                        <outlet property="searchResultsDelegate" destination="oJx-te-O16" id="K7Y-AL-uuS"/>
-                    </connections>
-                </searchDisplayController>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="venuesCell" editingAccessoryType="detailButton" id="cY9-jy-kF3">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cY9-jy-kF3" id="NAH-7r-ujb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6Zj-G7-pEL" id="2Ir-1V-bI1"/>
+                            <outlet property="delegate" destination="6Zj-G7-pEL" id="HHB-uP-Nad"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y74-B2-RDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631" y="968"/>
+            <point key="canvasLocation" x="1686" y="900"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="scw-Yt-0Z7">

@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+
+var user = ""
+
+
 // Function to remove keyboard on touch
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
@@ -30,7 +34,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
 
-    var user = ""
 
 
     override func viewDidLoad() {
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
         self.logInBox.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
         self.hideKeyboardWhenTappedAround()
         
-        /*
+        
         //refers to AppDelegate
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -58,13 +61,20 @@ class ViewController: UIViewController {
             let results = try context.executeFetchRequest(request)
             
             if results.count > 0{
+                
+                for result in results as! [NSManagedObject]{
+                
+                    user = result.valueForKey("username")! as! String
+                }
                 self.performSegueWithIdentifier("LoginToExplore", sender: nil)
             }
             
         }catch{
             print("Error fetching")
         }
-        */
+        
+        print("The user is: " + user)
+        
         
         
         
@@ -155,7 +165,7 @@ class ViewController: UIViewController {
                            
                             let username = jsondata["username"] as! String
                             
-                            self.user = username
+                            user = username
                             
                             let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                             

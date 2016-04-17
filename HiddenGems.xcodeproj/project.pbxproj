@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70BEB791CC430FE00515FF7 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70BEB781CC430FE00515FF7 /* NearbyViewController.swift */; };
 		B715322C1CBACA620004827C /* HiddenGemsLaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = B715322B1CBACA620004827C /* HiddenGemsLaunch.png */; };
 		B71532311CBAE61F0004827C /* iph6s180.png in Resources */ = {isa = PBXBuildFile; fileRef = B715322F1CBAE61F0004827C /* iph6s180.png */; };
 		B71532321CBAE61F0004827C /* iph6120.png in Resources */ = {isa = PBXBuildFile; fileRef = B71532301CBAE61F0004827C /* iph6120.png */; };
 		B71532341CBAE73D0004827C /* iph6&s.png in Resources */ = {isa = PBXBuildFile; fileRef = B71532331CBAE73D0004827C /* iph6&s.png */; };
 		B71B85181CB45C1300669E20 /* HiddenGemData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B71B85161CB45C1300669E20 /* HiddenGemData.xcdatamodeld */; };
-		B7211A7B1CB4C389006DDB12 /* GooglePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */; };
 		B7419BE91CB4C2180026DD68 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B7419BE81CB4C2180026DD68 /* Podfile */; };
 		B74A5B6D1C86A38B00E46425 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */; };
 		B756DDAD1CADF41B0005A612 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = B756DDA91CADF41B0005A612 /* face.png */; };
@@ -26,6 +26,7 @@
 		B75AB74E1CB0346D000B878D /* Deciduous Tree Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */; };
 		B75E0B1D1CBDC2D2002254DA /* Kitesurfing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */; };
 		B770DF611CC40563007D8B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B770DF5F1CC40563007D8B68 /* Main.storyboard */; };
+		B77CEF5A1CC44B85002FC67B /* GooglePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77CEF591CC44B85002FC67B /* GooglePlacesViewController.swift */; };
 		B787409F1CB710A10035E370 /* marker_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = B787409E1CB710A10035E370 /* marker_purple.png */; };
 		B78740A11CB710AA0035E370 /* marker_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B78740A01CB710AA0035E370 /* marker_red.png */; };
 		B78C23871CBB0C18001D119E /* HiddenGemsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B78C23861CBB0C18001D119E /* HiddenGemsBackground.png */; };
@@ -66,12 +67,12 @@
 		3D3310CB699C1480787682D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BB09FFBC376674DB3D1ED6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7B999F365FD75F02B0D3852E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B70BEB781CC430FE00515FF7 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		B715322B1CBACA620004827C /* HiddenGemsLaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HiddenGemsLaunch.png; path = Icons/HiddenGemsLaunch.png; sourceTree = SOURCE_ROOT; };
 		B715322F1CBAE61F0004827C /* iph6s180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iph6s180.png; path = Icons/iph6s180.png; sourceTree = SOURCE_ROOT; };
 		B71532301CBAE61F0004827C /* iph6120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iph6120.png; path = Icons/iph6120.png; sourceTree = SOURCE_ROOT; };
 		B71532331CBAE73D0004827C /* iph6&s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iph6&s.png"; path = "Icons/iph6&s.png"; sourceTree = SOURCE_ROOT; };
 		B71B85171CB45C1300669E20 /* HiddenGemData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiddenGemData.xcdatamodel; sourceTree = "<group>"; };
-		B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesViewController.swift; sourceTree = "<group>"; };
 		B7419BE81CB4C2180026DD68 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		B756DDA91CADF41B0005A612 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = face.png; path = Icons/face.png; sourceTree = SOURCE_ROOT; };
@@ -85,6 +86,7 @@
 		B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Deciduous Tree Filled-50.png"; path = "Icons/Deciduous Tree Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kitesurfing Filled-50.png"; path = "Icons/Kitesurfing Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B770DF601CC40563007D8B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B77CEF591CC44B85002FC67B /* GooglePlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesViewController.swift; sourceTree = "<group>"; };
 		B787409E1CB710A10035E370 /* marker_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_purple.png; path = Icons/marker_purple.png; sourceTree = SOURCE_ROOT; };
 		B78740A01CB710AA0035E370 /* marker_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_red.png; path = Icons/marker_red.png; sourceTree = SOURCE_ROOT; };
 		B78C23861CBB0C18001D119E /* HiddenGemsBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HiddenGemsBackground.png; path = Icons/HiddenGemsBackground.png; sourceTree = SOURCE_ROOT; };
@@ -197,7 +199,8 @@
 				B74A5B6C1C86A38B00E46425 /* ExploreViewController.swift */,
 				B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */,
 				BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */,
-				B7211A7A1CB4C389006DDB12 /* GooglePlacesViewController.swift */,
+				B70BEB781CC430FE00515FF7 /* NearbyViewController.swift */,
+				B77CEF591CC44B85002FC67B /* GooglePlacesViewController.swift */,
 				B71B85161CB45C1300669E20 /* HiddenGemData.xcdatamodeld */,
 				BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */,
 			);
@@ -432,13 +435,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7211A7B1CB4C389006DDB12 /* GooglePlacesViewController.swift in Sources */,
 				B74A5B6D1C86A38B00E46425 /* ExploreViewController.swift in Sources */,
 				BA2C97E31CB49B70007E49A8 /* ForgetPasswordVC.swift in Sources */,
 				B71B85181CB45C1300669E20 /* HiddenGemData.xcdatamodeld in Sources */,
 				BA6FADAB1C90FE7F0053D9CB /* RegisterViewController.swift in Sources */,
 				B7E2B3311C7CCC7700A57833 /* ViewController.swift in Sources */,
 				B79D96811CACFAB200043E99 /* MyAccountViewController.swift in Sources */,
+				B70BEB791CC430FE00515FF7 /* NearbyViewController.swift in Sources */,
+				B77CEF5A1CC44B85002FC67B /* GooglePlacesViewController.swift in Sources */,
 				B7E2B35F1C7CE51A00A57833 /* MapViewController.swift in Sources */,
 				B7E2B32F1C7CCC7700A57833 /* AppDelegate.swift in Sources */,
 				B79D967F1CACF41B00043E99 /* PreferencesViewController.swift in Sources */,
