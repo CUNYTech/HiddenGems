@@ -25,9 +25,9 @@
 		B75AB74C1CB032FC000B878D /* Bear Footprint Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */; };
 		B75AB74E1CB0346D000B878D /* Deciduous Tree Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */; };
 		B75E0B1D1CBDC2D2002254DA /* Kitesurfing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */; };
+		B770DF611CC40563007D8B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B770DF5F1CC40563007D8B68 /* Main.storyboard */; };
 		B787409F1CB710A10035E370 /* marker_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = B787409E1CB710A10035E370 /* marker_purple.png */; };
 		B78740A11CB710AA0035E370 /* marker_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B78740A01CB710AA0035E370 /* marker_red.png */; };
-		B78B65241CAB4F3200E903C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78B65221CAB4F3200E903C7 /* Main.storyboard */; };
 		B78C23871CBB0C18001D119E /* HiddenGemsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B78C23861CBB0C18001D119E /* HiddenGemsBackground.png */; };
 		B79D967F1CACF41B00043E99 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */; };
 		B79D96811CACFAB200043E99 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D96801CACFAB200043E99 /* MyAccountViewController.swift */; };
@@ -41,7 +41,6 @@
 		BA28B64F1CB47B38006E66A0 /* Kitesurfing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BA28B64E1CB47B38006E66A0 /* Kitesurfing Filled-50.png */; };
 		BA2C97E11CB48F5F007E49A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2C97E01CB48F5F007E49A8 /* Default-568h@2x.png */; };
 		BA2C97E31CB49B70007E49A8 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C97E21CB49B70007E49A8 /* ForgetPasswordVC.swift */; };
-
 		BA6FADAB1C90FE7F0053D9CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FADAA1C90FE7F0053D9CB /* RegisterViewController.swift */; };
 		FE5CB2AE55052D421DDB7C2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3310CB699C1480787682D1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -85,9 +84,9 @@
 		B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bear Footprint Filled-50.png"; path = "Icons/Bear Footprint Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Deciduous Tree Filled-50.png"; path = "Icons/Deciduous Tree Filled-50.png"; sourceTree = SOURCE_ROOT; };
 		B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kitesurfing Filled-50.png"; path = "Icons/Kitesurfing Filled-50.png"; sourceTree = SOURCE_ROOT; };
+		B770DF601CC40563007D8B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B787409E1CB710A10035E370 /* marker_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_purple.png; path = Icons/marker_purple.png; sourceTree = SOURCE_ROOT; };
 		B78740A01CB710AA0035E370 /* marker_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_red.png; path = Icons/marker_red.png; sourceTree = SOURCE_ROOT; };
-		B78B65231CAB4F3200E903C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B78C23861CBB0C18001D119E /* HiddenGemsBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HiddenGemsBackground.png; path = Icons/HiddenGemsBackground.png; sourceTree = SOURCE_ROOT; };
 		B79D967E1CACF41B00043E99 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = ../PreferencesViewController.swift; sourceTree = "<group>"; };
 		B79D96801CACFAB200043E99 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +146,6 @@
 		B7E2B3221C7CCC7700A57833 = {
 			isa = PBXGroup;
 			children = (
-
 				B7419BE81CB4C2180026DD68 /* Podfile */,
 				B7E2B32D1C7CCC7700A57833 /* HiddenGems */,
 				B7E2B3421C7CCC7700A57833 /* HiddenGemsTests */,
@@ -188,7 +186,7 @@
 				B75AB74B1CB032FC000B878D /* Bear Footprint Filled-50.png */,
 				B75AB74D1CB0346D000B878D /* Deciduous Tree Filled-50.png */,
 				B75E0B1C1CBDC2D2002254DA /* Kitesurfing Filled-50.png */,
-				B78B65221CAB4F3200E903C7 /* Main.storyboard */,
+				B770DF5F1CC40563007D8B68 /* Main.storyboard */,
 				B7E2B3351C7CCC7700A57833 /* Assets.xcassets */,
 				B7E2B3371C7CCC7700A57833 /* LaunchScreen.storyboard */,
 				B7E2B33A1C7CCC7700A57833 /* Info.plist */,
@@ -350,8 +348,8 @@
 				B75AB74C1CB032FC000B878D /* Bear Footprint Filled-50.png in Resources */,
 				B7E2B3391C7CCC7700A57833 /* LaunchScreen.storyboard in Resources */,
 				B7E2B3361C7CCC7700A57833 /* Assets.xcassets in Resources */,
-				B78B65241CAB4F3200E903C7 /* Main.storyboard in Resources */,
 				B756DDB21CADF8640005A612 /* logout-2.png in Resources */,
+				B770DF611CC40563007D8B68 /* Main.storyboard in Resources */,
 				B7419BE91CB4C2180026DD68 /* Podfile in Resources */,
 				B756DDAD1CADF41B0005A612 /* face.png in Resources */,
 				B715322C1CBACA620004827C /* HiddenGemsLaunch.png in Resources */,
@@ -479,10 +477,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B78B65221CAB4F3200E903C7 /* Main.storyboard */ = {
+		B770DF5F1CC40563007D8B68 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B78B65231CAB4F3200E903C7 /* Base */,
+				B770DF601CC40563007D8B68 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

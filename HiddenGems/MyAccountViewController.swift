@@ -37,16 +37,16 @@ class MyAccountViewController: UIViewController {
     
     
     @IBAction func editTextFields(sender: UIBarButtonItem) {
-        username.enabled = true
-        username.textColor = UIColor.blackColor()
+        //username.enabled = true
+        //username.textColor = UIColor.blackColor()
         
-        password.enabled = true
-        password.textColor = UIColor.blackColor()
-        password.secureTextEntry = false
+        //password.enabled = true
+        //password.textColor = UIColor.blackColor()
+        //password.secureTextEntry = false
 
-        repeatPassword.enabled = true
-        repeatPassword.textColor = UIColor.blackColor()
-        repeatPassword.text = ""
+        //repeatPassword.enabled = true
+        //repeatPassword.textColor = UIColor.blackColor()
+       // repeatPassword.text = ""
         
         email.enabled = true
         email.textColor = UIColor.blackColor()
@@ -254,8 +254,8 @@ class MyAccountViewController: UIViewController {
             let results = try context.executeFetchRequest(request)
             if results.count > 0 {
                 for result in results as! [NSManagedObject]{
-                    result.setValue(self.username.text, forKey: "username")
-                    result.setValue(self.password.text, forKey: "password")
+                    //result.setValue(self.username.text, forKey: "username")
+                    //result.setValue(self.password.text, forKey: "password")
                     result.setValue(self.email.text, forKey: "email")
                     result.setValue(self.phone.text, forKey: "phone")
                     result.setValue(self.ctry_code.text, forKey: "ctry_code")
