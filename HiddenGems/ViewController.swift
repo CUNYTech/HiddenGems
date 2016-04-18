@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import CoreData
+
+
+var user = ""
+
 
 // Function to remove keyboard on touch
 extension UIViewController {
@@ -30,6 +35,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
 
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
@@ -38,6 +44,39 @@ class ViewController: UIViewController {
         self.logInBox.layer.cornerRadius = 10
         self.logInBox.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
         self.hideKeyboardWhenTappedAround()
+        
+        
+        //refers to AppDelegate
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        //allows to access coredata database
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        let request = NSFetchRequest(entityName: "USER")
+        
+        request.returnsObjectsAsFaults = false
+
+        
+        do{
+            let results = try context.executeFetchRequest(request)
+            
+            if results.count > 0{
+                
+                for result in results as! [NSManagedObject]{
+                
+                    user = result.valueForKey("username")! as! String
+                }
+                self.performSegueWithIdentifier("LoginToExplore", sender: nil)
+            }
+            
+        }catch{
+            print("Error fetching")
+        }
+        
+        print("The user is: " + user)
+        
+        
+        
         
         
     }
@@ -74,7 +113,7 @@ class ViewController: UIViewController {
     func postLogIn(){
         
         
-        let url = NSURL(string:"http://54.152.30.2/hg/login_user")!
+        let url = NSURL(string:"http://54.152.30.2/hg/login")!
         let session = NSURLSession.sharedSession()
         let postParams = ["username":self.username.text!, "password":self.password.text!] as Dictionary<String, String>
         
@@ -94,9 +133,19 @@ class ViewController: UIViewController {
             guard let realResponse = response as? NSHTTPURLResponse where
                 realResponse.statusCode == 200 else {
                     print("Not a 200 response")
-                    print(data)
-                    print(response)
-                    print(error)
+                    //print(data)
+                    //print(response)
+                    //print(error)
+                    
+                    //force queue to come to a close so we can display the alert
+                    dispatch_async(dispatch_get_main_queue(),{() ->Void in
+                        let alert = UIAlertView()
+                        alert.title = "Login error"
+                        alert.message = "Invalid password/username"
+                        alert.addButtonWithTitle("Try again")
+                        alert.show()
+                        
+                    })
                     
                     return
             }
@@ -108,6 +157,81 @@ class ViewController: UIViewController {
                 
                 //force queue to come to a close.
                 dispatch_async(dispatch_get_main_queue(),{() ->Void in
+                    
+                    
+                        do{
+                            
+                            let jsondata =  try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
+                           
+                            let username = jsondata["username"] as! String
+                            
+                            user = username
+                            
+                            let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                            
+                            let context: NSManagedObjectContext = appDel.managedObjectContext
+                            
+                            let request = NSFetchRequest(entityName: "USER")
+                            
+                            request.returnsObjectsAsFaults = false
+                            
+                            //Predicate to the request which is a instruction that says I want to search for things the look like this:
+                            
+                            //Format:String is a the rule that determine the request of predicate
+                            //username = %@    %@ represents a string    "username" is the argument
+                            
+                            request.predicate = NSPredicate(format: "username = %@", username)
+                            
+                            do {
+                                let results = try context.executeFetchRequest(request)
+                                
+                                //If username existes in database, update its values
+                                if results.count > 0{
+                                    for result in results as! [NSManagedObject]{
+                                        
+                                        result.setValue(jsondata["password"], forKey: "password")
+                                        result.setValue(jsondata["email"], forKey: "email")
+                                        result.setValue(jsondata["country_code"], forKey: "ctry_code")
+                                        result.setValue(jsondata["phone_number"], forKey: "phone")
+                                        
+                                        do{
+                                            try context.save()
+                                        }catch{
+                                            print("There was a problem while saving into USER")
+                                        }
+                                        
+                                    }
+                                }else{
+                                    
+                                    //If it doesn't exist save in database
+                                    let entity = NSEntityDescription.entityForName("USER", inManagedObjectContext: context)
+                                    
+                                    let newUser = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
+                                    
+                                    newUser.setValue(jsondata["username"], forKey: "username")
+                                    newUser.setValue(jsondata["password"], forKey: "password")
+                                    newUser.setValue(jsondata["email"], forKey: "email")
+                                    newUser.setValue(jsondata["country_code"], forKey: "ctry_code")
+                                    newUser.setValue(jsondata["phone_number"], forKey: "phone")
+                                    
+                                    do{
+                                        try context.save()
+                                    }catch{
+                                        print("There was a problem while saving into USER")
+                                    }
+            
+                                }
+                                
+                            }catch{
+                                print("Error fetching")
+                            }
+                            
+                            
+                        }catch{
+                            print("Error")
+                        }
+                        
+                    
                     self.performSegueWithIdentifier("LoginToExplore", sender: nil)
 
                     })
@@ -124,6 +248,9 @@ class ViewController: UIViewController {
         print("POST : " + "Successful")
      
     }
+    
+
+
     
     
     override func didReceiveMemoryWarning() {
@@ -145,6 +272,16 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBarHidden = true
     }
     
+    //Send user name through segue to ExploreViewController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "LoginToExplore"{
+            let exploreVC: ExploreViewController = segue.destinationViewController as! ExploreViewController
+        
+            exploreVC.receivedUser = user}
+        
+        
+    }
     
     
     

@@ -15,6 +15,18 @@ class PreferencesViewController: UIViewController {
     @IBOutlet weak var categoriesBox: UIView!
     
 
+    @IBAction func savePreferences(sender: AnyObject) {
+        
+        let alert = UIAlertView()
+        alert.title = "Travel Preferences"
+        alert.message = "Your travel preferences have been saved successfully"
+        alert.addButtonWithTitle("Ok")
+        alert.show()
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

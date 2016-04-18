@@ -17,6 +17,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var repeatPassword: UITextField!
     @IBOutlet weak var registerBox: UIView!
+    @IBOutlet weak var countryCode: UITextField!
+    @IBOutlet weak var phone: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,22 +51,17 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButton(sender: UIButton) {
         
         
-        if (self.username.text!.isEmpty) || (self.password.text!.isEmpty) || (self.repeatPassword.text!.isEmpty) || (self.email.text!.isEmpty) {
+        if (self.username.text!.isEmpty) || (self.password.text!.isEmpty) || (self.repeatPassword.text!.isEmpty) || (self.email.text!.isEmpty){
             
             let alert = UIAlertView()
-            alert.title = "Empty text field"
-            alert.message = "Please enter information in every text field"
+            alert.title = "Empty field"
+            alert.message = "Please enter information in every field"
             alert.addButtonWithTitle("Ok")
             alert.show()
             
         }else if repeatPassword.text == password.text {
             
-                postCreateUser()
-                coreDataCreateUser()
-                self.username.text = ""
-                self.password.text = ""
-                self.email.text = ""
-                self.repeatPassword.text = ""
+            postCreateUser()
             
             }else{
                 self.repeatPassword.layer.borderWidth = 3
@@ -76,16 +74,13 @@ class RegisterViewController: UIViewController {
       
     }
     
-
-    
-    
     //Function that allows us to make a POST request to Create an account
     
     func postCreateUser(){
         
-        let url = NSURL(string:"http://54.152.30.2/hg/createuser")!
+        let url = NSURL(string:"http://54.152.30.2/hg/cuser")!
         let session = NSURLSession.sharedSession()
-        let postParams = ["username":self.username.text!, "password":self.password.text!, "email":self.email.text!] as Dictionary<String, String>
+        let postParams = ["username":self.username.text!, "password":self.password.text!, "email":self.email.text!, "country_code":self.countryCode.text!, "phone_number":self.phone.text!] as Dictionary<String, String>
         
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
@@ -103,9 +98,19 @@ class RegisterViewController: UIViewController {
             guard let realResponse = response as? NSHTTPURLResponse where
                 realResponse.statusCode == 200 else {
                     print("Not a 200 response")
-                    print(data)
-                    print(response)
-                    print(error)
+                    //print(data)
+                    //print(response)
+                    //print(error)
+                    
+                      //force queue to come to a close so we can display the alert
+                    dispatch_async(dispatch_get_main_queue(),{() ->Void in
+                        let alert = UIAlertView()
+                        alert.title = "Create account error"
+                        alert.message = "Couldn't create account"
+                        alert.addButtonWithTitle("Ok")
+                        alert.show()
+
+                    })
                     return
                     
             }
@@ -115,6 +120,32 @@ class RegisterViewController: UIViewController {
                 
                 print("POST:" + postString)
                 self.performSelectorOnMainThread("updatePostLabel:", withObject: postString, waitUntilDone: false)
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    
+                    //Save user in local database
+                    self.coreDataCreateUser()
+
+                    //Alert to show the status of the request
+                    let alert = UIAlertController(title: "Account Created", message: "Your account has been created successfully", preferredStyle: .Alert)
+                    
+                    let actionA = UIAlertAction(title: "Ok", style: .Default, handler: { (action:UIAlertAction) -> Void in
+                        self.username.text = ""
+                        self.password.text = ""
+                        self.email.text = ""
+                        self.repeatPassword.text = ""
+                        self.countryCode.text = ""
+                        self.phone.text = ""
+                        
+                    })
+                    
+                    alert.addAction(actionA)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    
+                    
+                    })
+                
+                
             }
         }).resume()
         
@@ -145,6 +176,10 @@ class RegisterViewController: UIViewController {
         
         newUser.setValue(email.text, forKey: "email")
         
+        newUser.setValue(phone.text, forKey: "phone")
+        
+        newUser.setValue(countryCode.text, forKey: "ctry_code")
+        
         do{
             try context.save()
             
@@ -162,12 +197,32 @@ class RegisterViewController: UIViewController {
         do{
             
             let results = try context.executeFetchRequest(request)
-            print(results)
+            //print(results)
+            
+            if results.count > 0 {
+                for result in results as! [NSManagedObject]{
+                    print(result.valueForKey("username")!)
+                    print(result.valueForKey("password")!)
+                    print(result.valueForKey("email")!)
+                    if (result.valueForKey("phone") != nil) {
+                        print(result.valueForKey("phone")!)
+                    }else{
+                        print("No phone")
+                    }
+                    if (result.valueForKey("ctry_code") != nil){
+                        print(result.valueForKey("ctry_code")!)
+                    }else{
+                        print("No country_code")
+                    }
+                }
+            }
             
         }catch{
             
-            print("There was a problem fetching ")
+            print("There was a problem fetching results ")
         }
+        
+        
         
     }
 
