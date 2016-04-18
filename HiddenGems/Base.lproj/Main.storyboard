@@ -618,48 +618,6 @@
             </objects>
             <point key="canvasLocation" x="-169" y="1910"/>
         </scene>
-        <!--MapGooglePlaces-->
-        <scene sceneID="NAB-Vj-KwC">
-            <objects>
-                <viewController title="MapGooglePlaces" id="Bzk-EU-F5T" customClass="GooglePlacesViewController" customModule="HiddenGems" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PWf-Um-RDC"/>
-                        <viewControllerLayoutGuide type="bottom" id="LYf-JN-WOO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="98i-dM-AoN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFl-Qk-rQq">
-                                <rect key="frame" x="0.0" y="64" width="600" height="672"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vFl-Qk-rQq" firstAttribute="top" secondItem="PWf-Um-RDC" secondAttribute="bottom" id="3Wd-Bi-slQ"/>
-                            <constraint firstItem="LYf-JN-WOO" firstAttribute="top" secondItem="vFl-Qk-rQq" secondAttribute="bottom" constant="-44" id="LvI-nU-2IX"/>
-                            <constraint firstItem="vFl-Qk-rQq" firstAttribute="leading" secondItem="98i-dM-AoN" secondAttribute="leadingMargin" constant="-20" id="WMK-AA-XVd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vFl-Qk-rQq" secondAttribute="trailing" constant="-20" id="wCi-vG-wwS"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="DwN-t0-G7V">
-                        <barButtonItem key="rightBarButtonItem" title="Explore" id="beH-32-te3">
-                            <connections>
-                                <action selector="exploreVenuesNearMe:" destination="Bzk-EU-F5T" id="sTy-cQ-K4k"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="mapViewContainer" destination="vFl-Qk-rQq" id="mFJ-GO-Emd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CZK-Jm-bqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="787" y="2617"/>
-        </scene>
         <!--My Account-->
         <scene sceneID="TwM-wY-uxb">
             <objects>
