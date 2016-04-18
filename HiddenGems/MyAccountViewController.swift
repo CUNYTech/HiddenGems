@@ -67,7 +67,7 @@ class MyAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateBox.layer.cornerRadius = 10
+        updateBox.layer.cornerRadius = 0
         
         //Remove keyboard on touch
         self.hideKeyboardWhenTappedAround()
