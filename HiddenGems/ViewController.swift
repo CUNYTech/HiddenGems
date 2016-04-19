@@ -11,6 +11,7 @@ import CoreData
 
 
 var user = ""
+var user_id = 0
 
 
 // Function to remove keyboard on touch
@@ -65,6 +66,7 @@ class ViewController: UIViewController {
                 for result in results as! [NSManagedObject]{
                 
                     user = result.valueForKey("username")! as! String
+                    user_id = result.valueForKey("id") as! Int
                 }
                 self.performSegueWithIdentifier("LoginToExplore", sender: nil)
             }
@@ -166,6 +168,7 @@ class ViewController: UIViewController {
                             let username = jsondata["username"] as! String
                             
                             user = username
+                            user_id = jsondata["user_id"] as! Int
                             
                             let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                             
@@ -193,6 +196,7 @@ class ViewController: UIViewController {
                                         result.setValue(jsondata["email"], forKey: "email")
                                         result.setValue(jsondata["country_code"], forKey: "ctry_code")
                                         result.setValue(jsondata["phone_number"], forKey: "phone")
+                                        result.setValue(jsondata["user_id"], forKey: "id")
                                         
                                         do{
                                             try context.save()
@@ -213,6 +217,8 @@ class ViewController: UIViewController {
                                     newUser.setValue(jsondata["email"], forKey: "email")
                                     newUser.setValue(jsondata["country_code"], forKey: "ctry_code")
                                     newUser.setValue(jsondata["phone_number"], forKey: "phone")
+                                    newUser.setValue(jsondata["user_id"], forKey: "id")
+
                                     
                                     do{
                                         try context.save()

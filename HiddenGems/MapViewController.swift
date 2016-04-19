@@ -153,7 +153,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             //print("this is URL: " + String(url) + "\n")
             
             //create session
-            let session = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            //let session instead of _
+            _ = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
                 
                 guard let realResponse = response as? NSHTTPURLResponse where
                     realResponse.statusCode == 200 else {
@@ -243,7 +244,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 let url = NSURL(string: (prefix as String)+"bg_512"+(suffix as String))!
                 let id = (venue["venue"] as! NSDictionary)["id"] as! NSString
                 
-                let session = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, Error) -> Void in
+                //let session 
+                _ = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, Error) -> Void in
                    
                 
                    if(data != nil){

@@ -36,7 +36,11 @@ class NearbyViewController: UITableViewController {
         cell.textLabel?.text = ((exploreVenueList[indexPath.row]["venue"] as! NSDictionary)["name"] as! String)
         let location = (exploreVenueList[indexPath.row]["venue"] as! NSDictionary)["location"] as! NSDictionary
         //print("LOCATION: " + String(location))
-        cell.detailTextLabel?.text = (location["address"] as! String)
+        if let address = location["address"]{
+            cell.detailTextLabel?.text = String(address)
+        }else{
+            cell.detailTextLabel?.text = "No address provided"
+        }
         let id = (exploreVenueList[indexPath.row]["venue"] as! NSDictionary)["id"] as! String
         cell.imageView?.image = UIImage(data: exploreImageCache[id]!)
         
