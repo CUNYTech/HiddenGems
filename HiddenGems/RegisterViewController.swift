@@ -137,6 +137,8 @@ class RegisterViewController: UIViewController {
                         self.countryCode.text = ""
                         self.phone.text = ""
                         
+                        self.performSegueWithIdentifier("to_home", sender: nil)
+                        
                     })
                     
                     alert.addAction(actionA)
