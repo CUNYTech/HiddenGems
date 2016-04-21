@@ -19,17 +19,23 @@ var yloc: CLLocationDegrees!
 
 var venueList: [NSDictionary]!
 //var exploreVenueList : NSDictionary!
-var exploreVenueList: NSArray!
+var exploreVenueList: NSMutableArray!
 
-var imageCache = [String: NSData]()
+//var imageCache = [String: NSData]()
 var exploreImageCache = [String: NSData]()
+
+var centerPoint: CLLocationCoordinate2D!
+
+var radius: Double!
+
+var tempSize: Int!
 
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+    
     let fqClient_id = "XC5G1YSZQWRNB0UH1VMDAMKZWX453N1IPUHWNO1XHG5AC3VH"
     let fqClient_secret = "5XGRVKYPGJHPK5NGODYBTI2GKQU2JUMJQMAXYMTS2TTZ3RXX"
-
+    
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -40,16 +46,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var findEvents: UIButton!
     
     let locationManager = CLLocationManager()
-   
-    var centerPoint = CLLocationCoordinate2D()
     
     var circleOverlay = MKCircle()
     
     var circleRenderer = MKCircleRenderer()
-  
     
-
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,14 +76,32 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.findEvents.layer.cornerRadius = 10
         
         if(exploreVenueList != nil){
-            pinExploreVenuesList()
+            if tempSize != preferenceList?.count{
+                tempSize = preferenceList.count
+                explore()
+            }else{
+                
+                pinExploreVenuesList()
+            }
+            
+            
+            
+        }
+        
+        if radius != nil && centerPoint != nil {
+            radiusText.text! = String(radius)
+            radiusSlider.value = Float(radius)
+            
+            // mapView.addOverlay(MKCircle(centerCoordinate: centerPoint, radius: CLLocationDistance(Double(radius))))
+            
         }
         
         //Remove keyboard on touch
         self.hideKeyboardWhenTappedAround()
         
+        print("LIST IN MAP ======" + String(preferenceList))
         
-
+        
     }
     
     
@@ -97,7 +119,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         centerPoint = CLLocationCoordinate2D(latitude: myLocation!.coordinate.latitude, longitude: myLocation!.coordinate.longitude)
         
-       // let regionDistance:CLLocationDistance = 3300
+        // let regionDistance:CLLocationDistance = 3300
         
         //let region = MKCoordinateRegionMakeWithDistance(centerPoint, regionDistance, regionDistance)
         
@@ -105,7 +127,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.mapView.setRegion(region, animated: true)
         
-       // self.locationManager.stopUpdatingLocation()
+        // self.locationManager.stopUpdatingLocation()
         
         //print(myLocation?.coordinate.latitude)
         
@@ -138,7 +160,117 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let radius : NSString = "&radius="+String(radiusText.text!)+"&limit=50" as NSString
         //print("This is the given radius " + (radius as String))
         
-        let venues : NSString = (baseURL as String) + (creds as String) + (radius as String) as NSString
+        exploreImageCache = [String:NSData]()
+        
+        var first = true
+        
+        var t = 0
+        
+        for pref in preferenceList{
+            let pref = pref["place_name"] as! String
+            let section : NSString = "&section=" + String(pref) as NSString
+            let venues : NSString = (baseURL as String) + (creds as String) + (radius as String) + (section as String) as NSString
+            
+            let venuesURL = NSURL(string: venues as String)
+            
+            if let url = venuesURL {
+                
+                //print("this is URL: " + String(url) + "\n")
+                
+                //create session
+                //let session instead of _
+                _ = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+                    
+                    guard let realResponse = response as? NSHTTPURLResponse where
+                        realResponse.statusCode == 200 else {
+                            print("Not a 200 response")
+                            //print(data)
+                            //print(response)
+                            //print(error)
+                            
+                            
+                            return
+                    }
+                    
+                    if let postString = NSString(data: data!, encoding: NSUTF8StringEncoding) as? String {
+                        print("POST: " + postString)
+                        self.performSelectorOnMainThread("updatePostLabel:", withObject: postString, waitUntilDone: false)
+                    
+                    if let urlContent = data{
+                        
+                        //print("This is data: " + String(urlContent))
+                        
+                        //convert to json
+                        let jsondata = NSData(data: urlContent)
+                        
+                        //print("This is jsondata " + String(jsondata))
+                        
+                        do{
+                            let content = try NSJSONSerialization.JSONObjectWithData(jsondata, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                            
+                            //print("This is content: " + String(content))
+                            
+                            let response = content["response"] as! NSDictionary
+                            
+                            //print("This is response: " + String(response))
+                            
+                            let groups = response["groups"] as! NSArray
+                            
+                            //print("This is groups: " + String(groups.count))
+                            
+                            let items = groups[0] as! NSDictionary
+                            
+                            //print("This is items: " + String(items.count))
+                            
+                            let venues = items["items"] as! NSMutableArray
+                            
+                            //print("These are the venues: " + String(venues.count))
+                            
+                            dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                                
+                                if first{
+                                    exploreVenueList = venues as NSMutableArray
+                                    first = false
+                                }else{
+                                    for i in venues{
+                                        exploreVenueList.addObject(i)
+                                    }
+                                    
+                                }
+                                
+                                if t == preferenceList.count{
+                                    self.pinExploreVenuesList()
+                                    
+                                }
+                                
+                                //print("Explore list " + String(exploreVenueList.count))
+                                //exploreImageCache = [String: NSData]()
+                                //self.pinExploreVenuesList()
+                            })
+                            
+                            t = t + 1
+                            
+                            
+                            
+                        }catch{
+                            print("Error")
+                        }
+                        
+                        
+                    }
+                    
+                    
+                    
+                    }
+                }).resume()
+                
+                
+                
+            }
+            
+        }
+        
+        /* let venues : NSString = (baseURL as String) + (creds as String) + (radius as String) as NSString
         //print("This is the list or venues" + (venues as String))
         
         
@@ -149,77 +281,77 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         
         if let url = venuesURL {
-            
-            //print("this is URL: " + String(url) + "\n")
-            
-            //create session
-            //let session instead of _
-            _ = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
-                
-                guard let realResponse = response as? NSHTTPURLResponse where
-                    realResponse.statusCode == 200 else {
-                        print("Not a 200 response")
-                        //print(data)
-                        //print(response)
-                        //print(error)
-                    
-                        
-                        return
-                }
-                
-                if let urlContent = data{
-                    
-                    //print("This is data: " + String(urlContent))
-                    
-                    //convert to json
-                    let jsondata = NSData(data: urlContent)
-                    
-                    //print("This is jsondata " + String(jsondata))
-                    
-                    do{
-                        let content = try NSJSONSerialization.JSONObjectWithData(jsondata, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                        
-                        //print("This is content: " + String(content))
-                        
-                        let response = content["response"] as! NSDictionary
-                        
-                        //print("This is response: " + String(response))
-                        
-                        let groups = response["groups"] as! NSArray
-                        
-                        //print("This is groups: " + String(groups.count))
-                        
-                        let items = groups[0] as! NSDictionary
-                        
-                        //print("This is items: " + String(items.count))
-                        
-                        let venues = items["items"] as! NSArray
-                        
-                        //print("These are the venues: " + String(venues.count))
-                        
-                        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                            exploreVenueList = venues
-                            print("Explore list " + String(exploreVenueList.count))
-                            exploreImageCache = [String: NSData]()
-                            self.pinExploreVenuesList()
-                        })
-                        
-                        
-                        
-                    }catch{
-                        print("Error")
-                    }
-                    
-                    
-                }
-                
-                
-                
-                
-            }).resume()
-            
-
+        
+        //print("this is URL: " + String(url) + "\n")
+        
+        //create session
+        //let session instead of _
+        _ = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+        
+        guard let realResponse = response as? NSHTTPURLResponse where
+        realResponse.statusCode == 200 else {
+        print("Not a 200 response")
+        //print(data)
+        //print(response)
+        //print(error)
+        
+        
+        return
         }
+        
+        if let urlContent = data{
+        
+        //print("This is data: " + String(urlContent))
+        
+        //convert to json
+        let jsondata = NSData(data: urlContent)
+        
+        //print("This is jsondata " + String(jsondata))
+        
+        do{
+        let content = try NSJSONSerialization.JSONObjectWithData(jsondata, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+        
+        //print("This is content: " + String(content))
+        
+        let response = content["response"] as! NSDictionary
+        
+        //print("This is response: " + String(response))
+        
+        let groups = response["groups"] as! NSArray
+        
+        //print("This is groups: " + String(groups.count))
+        
+        let items = groups[0] as! NSDictionary
+        
+        //print("This is items: " + String(items.count))
+        
+        let venues = items["items"] as! NSArray
+        
+        //print("These are the venues: " + String(venues.count))
+        
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+        exploreVenueList = venues
+        print("Explore list " + String(exploreVenueList.count))
+        exploreImageCache = [String: NSData]()
+        self.pinExploreVenuesList()
+        })
+        
+        
+        
+        }catch{
+        print("Error")
+        }
+        
+        
+        }
+        
+        
+        
+        
+        }).resume()
+        
+        
+        }*/
         
     }
     
@@ -244,16 +376,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 let url = NSURL(string: (prefix as String)+"bg_512"+(suffix as String))!
                 let id = (venue["venue"] as! NSDictionary)["id"] as! NSString
                 
-                //let session 
+                //let session
                 _ = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data:NSData?, response:NSURLResponse?, Error) -> Void in
-                   
-                
-                   if(data != nil){
-                        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                             exploreImageCache[id as String] =  data! as NSData
-                        
                     
-                    })
+                    
+                    if(data != nil){
+                        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                            exploreImageCache[id as String] =  data! as NSData
+                            
+                            
+                        })
                     }
                 }).resume()
                 
@@ -275,14 +407,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 //add annotation to the map
                 mapView.addAnnotation(annotation)
                 
-
+                
                 
             }
             
         }
     }
     
-
+    
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Errors:" + error.localizedDescription)
     }
@@ -294,10 +426,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBAction func setARadius(sender: UISlider) {
         
-       let slider = sender.value
+        let slider = sender.value
         
         radiusText.text = String(slider)
-        print(radiusSlider.value)
+        
+        radius = Double(slider)
+        //print(radiusSlider.value)
         
         explore()
         
@@ -323,34 +457,40 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.navigationController?.navigationBarHidden = false
     }
     
-    
-   /* @IBAction func DrawCircle(sender: UIButton) {
+    func  updatePostLabel(text: String) {
+        print("POST : " + "Successful")
         
-        
-        let radiusCircle:CLLocationDistance = Double(radiusSlider.value)
-        
-        
-        mapView.addOverlay(MKCircle(centerCoordinate: centerPoint, radius: radiusCircle))
-
-}
-    
-    
-   
+    }
     
     
     
-
+    /* @IBAction func DrawCircle(sender: UIButton) {
+    
+    
+    let radiusCircle:CLLocationDistance = Double(radiusSlider.value)
+    
+    
+    mapView.addOverlay(MKCircle(centerCoordinate: centerPoint, radius: radiusCircle))
+    
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-*/
-
+    */
+    
 }

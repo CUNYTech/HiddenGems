@@ -2,6 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
     <entity name="PREFERENCES" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="preference_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="preference_name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="USER" syncable="YES">
@@ -13,7 +14,7 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="USER" positionX="-27" positionY="18" width="128" height="135"/>
-        <element name="PREFERENCES" positionX="-27" positionY="63" width="128" height="75"/>
+        <element name="PREFERENCES" positionX="90" positionY="-22" width="128" height="88"/>
+        <element name="USER" positionX="-297" positionY="36" width="128" height="133"/>
     </elements>
 </model>

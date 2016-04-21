@@ -11,9 +11,11 @@ import UIKit
 class NearbyViewController: UITableViewController {
     
     let totalRows : Int = exploreVenueList.count as Int
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("THE TOTAL ROWS ARE: " + String(totalRows))
 
         // Do any additional setup after loading the view.
     }
